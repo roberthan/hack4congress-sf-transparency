@@ -21,3 +21,4 @@ app.models       = require('./models');
 
 // Module's Routes. Please note this is actually under /hello, because module is attached under /hello
 app.get('/', app.callbacks.sayHello);
+app.get()
