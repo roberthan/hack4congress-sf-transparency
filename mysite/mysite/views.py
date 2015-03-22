@@ -4,6 +4,6 @@ from django.http import HttpResponse
 import datetime
 
 def home(request):
-	t = loader.get_template('templates/hack4congress_index.html')
+	t = loader.get_template('hack4congress_index.html')
 	c = Context()
 	return HttpResponse(t.render(c))
