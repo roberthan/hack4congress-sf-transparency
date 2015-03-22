@@ -7,7 +7,7 @@ def home(request):
 	t = loader.get_template('hack4congress_index.html')
 	f = open("interests.txt").readlines()
 	c = Context({
-		"interests" : "bkasdf"
+		"interests" : f
 		})
 	return HttpResponse(t.render(c))
 
