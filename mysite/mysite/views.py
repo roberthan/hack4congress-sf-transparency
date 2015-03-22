@@ -18,6 +18,6 @@ def result(request):
 		i2s = json.load(i2s_file)
 		result = i2s[interest]
 	t = loader.get_template('hack4congress_results.html')
-	result = sorted(result, key=lambda x:-x.influence)
+	result = sorted(result, key=lambda x:-x["influence"])
 	c = Context({"interestname":interest, "res":result})
 	return HttpResponse(t.render(c))
