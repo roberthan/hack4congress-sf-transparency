@@ -6,7 +6,7 @@ import datetime
 
 def home(request):
 	t = loader.get_template('hack4congress_index.html')
-	f = open("/home/ec2-user/hack4congress/mysite/mysite/interests.txt").readlines()
+	f = [x.strip() for x in open("/home/ec2-user/hack4congress/mysite/mysite/interests.txt").readlines()]
 	c = Context({
 		"interests" : f
 		})
