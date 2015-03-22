@@ -1,9 +1,9 @@
 from django.shortcuts import render
-
+from django.template import loader, Context
 from django.http import HttpResponse
 import datetime
 
 def home(request):
-    now = datetime.datetime.now()
-    html = "<html><body>It is now %s.</body></html>" % now
-    return HttpResponse(html)
+	t = loader.get_template('hack4congress_index.html')
+	c = Context()
+	return HttpResponse(t.render(c))
