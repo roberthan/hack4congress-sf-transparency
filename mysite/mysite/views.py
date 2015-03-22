@@ -16,7 +16,8 @@ def result(request):
 	interest = request.GET['id']
 	with open('/home/ec2-user/hack4congress/mysite/mysite/i2s.json') as i2s_file:
 		i2s = json.load(i2s_file)
-		result = i2s[interest]
+		result = i2s[interest].strip()
 	t = loader.get_template('hack4congress_results.html')
-	c = Context({"name":interest, "res":result})
+	result = sorted(result, key=lambda x:-x.influence)
+	c = Context({"interestname":interest, "res":result})
 	return HttpResponse(t.render(c))

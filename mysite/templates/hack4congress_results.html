@@ -34,11 +34,20 @@
 </head>
 <body>
   <h1>{{interestname}}</h1>
-  <div id="yes">
-	<h2>Supports lower housing prices</h2>
 	<table width=500>
+    <th>Influence</th>
+      <th width=200>Senator</th>
+      <th>State</th>
+      <th>Party</th>
     {%for senator in res%}
-		<tr><th width=200>{{senator}}</th><th>{{senator.name}}</th><th>Donate</th><th>Send an Email!</th></tr>
+		<tr>
+      <th>{{senator.influence}}</th>
+      <th width=200>{{senator.name}}</th>
+      <th>{{senator.state}}</th>
+      <th>{{senator.party}}</th>
+      <th>Donate</th>
+      <th>Send an Email!</th>
+    </tr>
 		{%endfor%}
 	</table>
 </body>
