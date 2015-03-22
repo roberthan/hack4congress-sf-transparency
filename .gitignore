@@ -1,0 +1,10 @@
+*.pyc
+*.pyo
+*.log
+*.pot
+bin/
+build/
+libs/
+dist/
+__pycache__/
+
