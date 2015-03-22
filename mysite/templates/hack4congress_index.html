@@ -55,8 +55,8 @@
     }
   </script>
   
-  <form action="hack4congress_results.html">
-  <select data-placeholder="Choose an issue" class="chzn-select" style="width:350px;" tabindex="-1" multiple="false" name="faculty" style="width:200px;">
+  <form action="{% url 'mysite.result' %}">
+  <select data-placeholder="Pick an issue" class="chzn-select" style="width:350px;" tabindex="-1" multiple="false" name="id" style="width:200px;">
         <option value></option>
 		<option value="AC">A</option>
         <option value="AD">B</option>
