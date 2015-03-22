@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'mysite.views.home', name='home')
+    url(r'^$', 'mysite.views.home', name='home'),
     # url(r'^$', include('mysite.glassroot.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
