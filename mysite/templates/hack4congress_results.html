@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>Anna Dowlin</title>
+  <title>Lobby with Influence: {{interestname}}</title>
   <style>
     body {
       text-align: center;
@@ -36,20 +36,24 @@
   </style>
 </head>
 <body>
-  <h1>{{interestname}}</h1>
+  <h1>Lobby with Influence: {{interestname}}</h1>
+  <center>
 	<table width=500>
     <th>Influence</th>
       <th width=200>Senator</th>
       <th>State</th>
       <th>Party</th>
+      <th>Email the Senator</th>
+      <th>Find friends in that state</th>
     {%for senator in res%}
 		<tr>
       <td>{{senator.influence}}</td>
       <td width=200>{{senator.name}}</td>
       <td>{{senator.state}}</td>
       <td>{{senator.party}}</td>
-      <td><form action="https://docs.google.com/forms/d/1eD1WlJFK6hWsxyQtxsa-HMNLVZ5wh_8pTNS5UV9kXGA/viewform"><input type="submit" value="Send an Email!"></form></td><td><form action="https://www.facebook.com/search/str/friends%2Bin%2B{{ senator.state }}/keywords_users"><input type="submit" id="blue"; value="Find Facebook Friends!"></form></td>
+      <td><form action="https://docs.google.com/forms/d/1eD1WlJFK6hWsxyQtxsa-HMNLVZ5wh_8pTNS5UV9kXGA/viewform?entry.1947471154={{senator.name}}&entry.196066015=rannazhou@gmail.com&entry.1644942036={{interestname}}"><input type="submit" value="Email"></form></td><td><form action="https://www.facebook.com/search/str/friends%2Bin%2B{{ senator.state }}/keywords_users"><input type="submit" id="blue"; value="Facebook"></form></td>
     </tr>
 		{%endfor%}
 	</table>
+</center>
 </body>
