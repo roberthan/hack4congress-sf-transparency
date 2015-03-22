@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from glassroot import views
+from mysite.glassroot import views
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
