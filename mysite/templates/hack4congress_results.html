@@ -51,7 +51,7 @@
       <td width=200>{{senator.name}}</td>
       <td>{{senator.state}}</td>
       <td>{{senator.party}}</td>
-      <td><form action="https://docs.google.com/forms/d/1eD1WlJFK6hWsxyQtxsa-HMNLVZ5wh_8pTNS5UV9kXGA/viewform?entry.1947471154={{senator.name}}&entry.196066015=rannazhou@gmail.com&entry.1644942036={{interestname}}"><input type="submit" value="Email"></form></td><td><form action="https://www.facebook.com/search/str/friends%2Bin%2B{{ senator.state }}/keywords_users"><input type="submit" id="blue"; value="Facebook"></form></td>
+      <td><form action="https://docs.google.com/forms/d/1eD1WlJFK6hWsxyQtxsa-HMNLVZ5wh_8pTNS5UV9kXGA/viewform?entry.1947471154={{senator.name|escape}}&entry.196066015=rannazhou@gmail.com&entry.1644942036={{interestname}}"><input type="submit" value="Email"></form></td><td><form action="https://www.facebook.com/search/str/friends%2Bin%2B{{ senator.state }}/keywords_users"><input type="submit" id="blue"; value="Facebook"></form></td>
     </tr>
 		{%endfor%}
 	</table>
