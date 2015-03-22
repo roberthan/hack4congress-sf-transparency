@@ -33,23 +33,12 @@
   </style>
 </head>
 <body>
-  <h1>Housing Prices</h1>
+  <h1>{{interestname}}</h1>
   <div id="yes">
 	<h2>Supports lower housing prices</h2>
 	<table width=500>
-		<tr><th width=200>Name</th><th>Location</th><th>Donate</th><th>Send an Email!</th></tr>
-		<tr><td width=200>ABC</td><td>Location</td><td><input type="submit" value="Donate!"></td><td><input type="submit" value="Send an Email!"></th></tr></td></tr>
-		<tr><td width=200>DEF</td><td>Location</td><td><input type="submit" value="Donate!"></td><td><input type="submit" value="Send an Email!"></th></tr></td></tr>
-		<tr><td width=200>GHI</td><td>Location</td><td><input type="submit" value="Donate!"></td><td><input type="submit" value="Send an Email!"></th></tr></td></tr>
+    {%for senator in res%}
+		<tr><th width=200>{{senator}}</th><th>{{senator.name}}</th><th>Donate</th><th>Send an Email!</th></tr>
+		{%endfor%}
 	</table>
-  </div>
-  <div id="no">
-	<h2>Against lower housing prices</h2>
-	<table width=500>
-		<tr><th width=200>Name</th><th>Location</th><th>Send an Email!</th></tr></th></tr>
-		<tr><td width=200>JKL</td><td>Location</td><td><input type="submit" value="Send an Email!"></th></tr></td></tr>
-		<tr><td width=200>MNO</td><td>Location</td><td><input type="submit" value="Send an Email!"></th></tr></td></tr>
-		<tr><td width=200>PQR</td><td>Location</td>><td><input type="submit" value="Send an Email!"></th></tr></td></tr>
-	</table>
-  </div>
 </body>
