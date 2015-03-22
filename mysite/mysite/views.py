@@ -13,7 +13,7 @@ def home(request):
 
 def result(request):
 	interest = request.GET['id']
-	with open('i2s.json') as i2s_file:
+	with open('/home/ec2-user/hack4congress/mysite/mysite/i2s.json') as i2s_file:
 		i2s = json.load(i2s_file)
 		result = i2s[interest]
 	t = loader.get_template('hack4congress_results.html')
