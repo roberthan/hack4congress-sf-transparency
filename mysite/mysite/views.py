@@ -5,7 +5,10 @@ import datetime
 
 def home(request):
 	t = loader.get_template('hack4congress_index.html')
-	c = Context()
+	f = open("interests.txt").readlines()
+	c = Context({
+		"interests" : "bkasdf"
+		})
 	return HttpResponse(t.render(c))
 
 def result(request):
